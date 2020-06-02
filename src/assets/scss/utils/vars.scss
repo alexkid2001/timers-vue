@@ -2,13 +2,21 @@
    ========================================================================== */
 
 // Font
-$mainFont                : 'Montserrat', Helvetica, Arial, sans-serif;
+$mainFont                : 'Nunito Sans', sans-serif;
+$extraBoldFont           : 'Nunito Sans ExtraBold', sans-serif;
+
+
+$mainFontColor           : #282B31;
+$secondaryFontColor      : #676C75;
+$markerColor             : #999EA8;
+$borderColor             : #E7E8EA;
+$arrow-color             : #b9bdc3;
+$timerTitleColor         : #5586F2;
 
 // Size
-$mainFontColor           : #101010;
-$mainFontSize            : 18px;
+$mainFontSize            : 16px;
 $mainFontWeight          : 400;
-$mainLineHeight          : 1.4;
+$mainLineHeight          : 30px;
 
 $desktopWidth            : 1280px;
 $smDesktopWidth          : 1024px;
@@ -17,28 +25,11 @@ $smTableWidth            : 640px;
 $phoneWidth              : 480px;
 $smPhoneWidth            : 320px;
 
-/*
- All colors taken from:
- https://github.com/vedees/uimini
-*/
 
-// Main color
-$default-color           : #ffffff;
-$primary-color           : #444ce0;
-$success-color           : #26de81;
-$danger-color            : #fc5c65;
-$warning-color           : #fed330;
-$light-color             : #999999;
-$purple-color            : #8854d0;
 
-// Neutral Color
-$neutral-primary         : #303133;
-$neutral-regular         : #606266;
-$neutral-secondary       : #909399;
-$neutral-placeholder     : #C0C4CC;
 
-// Border Color
-$border-base             : #DCDFE6;
-$border-light            : #E4E7ED;
-$border-lighter          : #EBEEF5;
-$border-lightex          : #F2F6FC;
+
+// Background Color
+$primary-bg              : url(/assets/img/primary-bg.png);
+$grey-bg                 : #f8f9fa;
+$secondary-bg            : #ffffff;

@@ -1,0 +1,58 @@
+.timers-block {
+  background-image: $primary-bg;
+  color: white;
+
+  &__wrap {
+    padding-top: 114px;
+    padding-bottom: 114px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__discription {
+    max-width: 570px;
+    margin: 16px auto 0;
+    text-align: center;
+  }
+
+  .timers-form {
+    margin: 60px auto 0;
+  }
+}
+
+.timers-form {
+  background: #FFFFFF;
+  box-shadow: 0px 12px 24px rgba(40, 43, 49, 0.16);
+  border-radius: 12px;
+  max-width: 770px;
+
+  &__create-block {
+    padding: 40px 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid $borderColor;
+
+    & > *:nth-child(n+2) {
+      margin-left: 20px;
+    }
+
+    .input {
+      width: 305px;
+    }
+
+    .button {
+      min-width: 165px;
+    }
+  }
+
+  &__timers {
+    padding: 30px 140px 40px;
+
+    & > *:nth-child(n+2) {
+      margin-top: 40px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.nav {
+  display: flex;
+
+  &__item {
+    font-size: 15px;
+    line-height: 20px;
+
+    &:nth-child(n+2) {
+      margin-left: 31px;
+    }
+  }
+}

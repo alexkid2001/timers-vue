@@ -1,0 +1,29 @@
+.timer {
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    color: $timerTitleColor;
+    font-size: 20px;
+    line-height: 30px;
+    font-family: $extraBoldFont;
+    width: 150px;
+  }
+
+  &__counter {
+    width: 117px;
+    margin-left: 38px;
+  }
+
+  &__action {
+    margin-left: 42px;
+    display: flex;
+
+    & > *:nth-child(n+2) {
+      margin-left: 20px;
+    }
+  }
+}

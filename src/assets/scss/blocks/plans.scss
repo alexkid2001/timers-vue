@@ -1,0 +1,48 @@
+.plans {
+  background-color: $grey-bg;
+
+  &__wrap {
+    padding: 111px 0 120px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__description {
+    color: $secondaryFontColor;
+    flex-basis: 370px;
+    max-width: 370;
+  }
+
+  &__title {
+    
+  }
+
+  &__content {
+    margin-top: 16px;
+  }
+
+  &__number {
+    margin-top: 15px;
+  }
+
+  &__promo {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 18px;
+    
+    .input {
+      width: 208px;
+    }
+
+    .button {
+      margin-left: 15px;
+      min-width: 130px;
+    }
+  }
+
+  &__list {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+}

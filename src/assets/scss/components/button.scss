@@ -1,0 +1,69 @@
+.button {
+  border-radius: 6px;
+  text-align: center;
+  padding: 14px 18px 13px;
+  background-color: white;
+  color: black;
+  width: auto;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 23px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+  &_small {
+    font-size: 14px;
+    line-height: 19px;
+    padding: 11px 21px 10px;
+  }
+
+  &_primary {
+    background: linear-gradient(163.61deg, #7956EC 0%, #2FB9F8 100%);
+    color: white;
+
+    svg path {
+      fill: white;
+    }
+  }
+
+  &_secondary {
+    background: linear-gradient(165.96deg, #FF8E64 0%, #FFE641 100%);
+    color: white;
+
+    svg path {
+      fill: white;
+    }
+  }
+
+  &_success {
+    background: linear-gradient(165.96deg, #009FC5 0%, #3CECB0 100%);
+    color: white;
+
+    svg path {
+      fill: white;
+    }
+  }
+
+  &_worning {
+    background: linear-gradient(135deg, #F23673 0%, #FCA069 100%);
+    color: white;
+
+    svg path {
+      fill: white;
+    }
+  }
+
+  &_start, &_pause, &_delete {
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_start, &_pause {
+    border-radius: 50%;
+  }
+}

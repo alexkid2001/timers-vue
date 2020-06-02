@@ -1,7 +1,7 @@
 {
-  "name": "webpacktemplate",
+  "name": "Netpeak Test",
   "version": "1.0.0",
-  "description": "My template",
+  "description": "Test task for Metpeak Odessa",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
@@ -11,13 +11,10 @@
     "> 1%",
     "last 3 version"
   ],
-  "author": "https://github.com/vedees",
+  "author": "https://github.com/alexkid2001",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vedees/webpack-template.git"
-  },
-  "bugs": {
-    "url": "https://github.com/vedees/webpack-template/issues"
+    "url": "git+https://github.com/alexkid2001/timers-vue.git"
   },
   "keywords": [
     "webpack",
@@ -45,6 +42,8 @@
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.0",
     "postcss-loader": "^3.0.0",
+    "pug": "^3.0.0",
+    "pug-plain-loader": "^1.0.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.1.2",
     "vue-loader": "^15.8.3",

@@ -1,24 +1,23 @@
-@import "utils/libs";
 @import "utils/vars";
 @import "utils/mixins";
 @import "utils/fonts";
 @import "utils/reset";
 
-html {
-  line-height: $mainLineHeight;
-  font-size: $mainFontSize;
-  color: $mainFontColor;
-  height: 100%;
-  @media screen and (max-width: $desktopWidth) {
-    font-size: 16px;
-  }
-  @media screen and (max-width: $tableWidth) {
-    font-size: 15px;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    font-size: 14px;
-  }
-}
+// html {
+//   line-height: $mainLineHeight;
+//   font-size: $mainFontSize;
+//   color: $mainFontColor;
+//   height: 100%;
+//   @media screen and (max-width: $desktopWidth) {
+//     font-size: 16px;
+//   }
+//   @media screen and (max-width: $tableWidth) {
+//     font-size: 15px;
+//   }
+//   @media screen and (max-width: $phoneWidth) {
+//     font-size: 14px;
+//   }
+// }
 
 body {
   margin: 0;
@@ -26,8 +25,10 @@ body {
   font-family: $mainFont;
   font-size: $mainFontSize;
   font-weight: $mainFontWeight;
+  line-height: $mainLineHeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: $mainFontColor;
 }
 
 *,
@@ -56,51 +57,63 @@ li {
   list-style-type: none;
 }
 
-section,
-.section {
-  position: relative;
-  padding: 40px 0;
-  @media screen and (max-width: $smDesktopWidth) {
-    padding: 36px 0;
-  }
-  @media screen and (max-width: $tableWidth) {
-    padding: 28px 0;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    padding: 20px 0;
-  }
-}
+// section,
+// .section {
+//   position: relative;
+//   padding: 40px 0;
+//   @media screen and (max-width: $smDesktopWidth) {
+//     padding: 36px 0;
+//   }
+//   @media screen and (max-width: $tableWidth) {
+//     padding: 28px 0;
+//   }
+//   @media screen and (max-width: $phoneWidth) {
+//     padding: 20px 0;
+//   }
+// }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  min-height: 100vh;
-  min-width: 100vh;
-}
+// .wrapper {
+//   display: flex;
+//   flex-direction: column;
+//   margin: 0 auto;
+//   min-height: 100vh;
+//   min-width: 100vh;
+// }
 
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+// .content-wrapper {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+// }
 
 .container {
-  width: 100%;
-  flex: 0 0 auto;
+  width: 1170px;
   position: relative;
   margin: 0 auto;
-  max-width: $desktopWidth;
-  @media screen and (max-width: $smDesktopWidth) {
-    max-width: $tableWidth;
-  }
-  @media screen and (max-width: $tableWidth) {
-    max-width: $phoneWidth;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    max-width: $smPhoneWidth;
-  }
+  // max-width: $desktopWidth;
+  // @media screen and (max-width: $smDesktopWidth) {
+  //   max-width: $tableWidth;
+  // }
+  // @media screen and (max-width: $tableWidth) {
+  //   max-width: $phoneWidth;
+  // }
+  // @media screen and (max-width: $phoneWidth) {
+  //   max-width: $smPhoneWidth;
+  // }
 }
 
-// Modules:
-// example: @import "modules/my-module.scss";
+@import "components/button.scss";
+@import "components/input.scss";
+@import "components/plan-block.scss";
+@import "components/list.scss";
+@import "components/timer.scss";
+
+
+@import "blocks/block-title.scss";
+@import "blocks/header.scss";
+@import "blocks/nav.scss";
+@import "blocks/intro.scss";
+@import "blocks/plans.scss";
+@import "blocks/timers-block.scss";
+@import "blocks/footer.scss";
+@import "blocks/social.scss";
