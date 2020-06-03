@@ -24,7 +24,7 @@ import FormButton from './FormButton.vue'
 
 export default {
   components: {
-
+    FormButton
   }
 }
 </script>
