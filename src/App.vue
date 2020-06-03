@@ -1,6 +1,6 @@
 <template lang="pug">
   #app
-    include components/header
+    Header
     include components/intro
     Plans
     TimersBlock
@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import Header from './components/Header.vue'
 import Plans from './components/Plans.vue'
 import TimersBlock from './components/TimersBlock.vue'
 import Footer from './components/Footer.vue'
@@ -15,6 +16,7 @@ import Footer from './components/Footer.vue'
 export default {
   name: 'app',
   components: {
+    Header,
     Plans,
     TimersBlock,
     Footer,

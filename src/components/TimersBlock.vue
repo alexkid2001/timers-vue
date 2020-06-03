@@ -8,29 +8,31 @@
         | This sounded nonsense to Alice, so she said nothing, but set off at once toward the Red Queen. 
         | To her surprise, she lost sight of her in a moment.
       .timers-form
-        .timers-form__create-block
-          form-input(
-            :inputClass="'input_timer-name'"
-            :type="'text'"
-            :hint="'Timer Name'"
+        form.timers-form__create-block(
+            @submit.prevent="createTimer"
           )
-          .button.button_secondary Create Timer
+            form-input(
+              :inputClass="'input_timer-name'"
+              :type="'text'"
+              :hint="'Timer Name'"
+              v-model="newTimerName"
+              v-on:keyup.enter="createTimer"
+            )
+            .button.button_secondary(
+              @click="createTimer"
+            ) Create Timer
         .timers-form__timers
           timer(
-            :value="timer"
-            :title="'Timer name 1'"
-            @newTick="newTick($event)"
-          )
-          timer(
-            :value="timer"
-            :title="'Timer name 2'"
-            @newTick="newTick"
-          )
-          timer(
-            :value="timer"
-            :title="'Timer name 3'"
-            @newTick="newTick"
-          )
+            v-for="timer in timers" :key="timer.id"
+            :id="timer.id"
+            :value="timer.time"
+            :title="timer.title"
+            :timestamp="timer.timestamp"
+            :isStart="timer.isStart"
+            @stop-timer="stopTimer"
+            @start-timer="startTimer(timer.id)"
+            @delete-timer="deleteTimer(timer.id)"
+          ) 
 
 </template>
 
@@ -46,13 +48,66 @@ export default {
   },
   data() {
     return {
-      timer: '00:00:35'
+      timer: '00:00:35',
+      timers: [],
+      newTimerName: '',
+
     }
   },
+  created() {
+    const storage = JSON.parse(localStorage.getItem('timers'));
+    this.timers = storage ? storage : [];
+    console.log('TIMERS', this.timers);
+  },
   methods: {
-    newTick(value, event) {
-      console.log('newTick', value);
-      console.log(event);
+    startTimer(id) {
+      const date = new Date();
+      const timer = this.timers.find(item => item.id === id);
+      if (timer) {
+        timer.isStart = true;
+        timer.timestamp = date.getTime();
+        this.saveToStorage();
+      }
+    },
+    stopTimer(data) {
+      const date = new Date();
+      const index = this.timers.findIndex(item => item.id === data.id);
+      
+      if (index !== -1) {
+        this.timers[index].isStart = false;
+        this.timers[index].time = data.time;
+        this.timers[index].timestamp = date.getTime();
+        
+        this.saveToStorage();
+      }
+    },
+    deleteTimer(id) {
+      const index = this.timers.findIndex(item => item.id === id);
+      if (index >= 0 ) {
+        this.timers.splice(index, 1);
+        this.saveToStorage();
+      }
+    },
+    createTimer() {
+      const date = new Date();
+      const month = ('0' + (date.getMonth() + 1)).slice(-2);
+      const monthDay = ('0' + date.getMonth()).slice(-2);
+      const name = this.newTimerName ? this.newTimerName  : `${date.getFullYear()}/${month}/${monthDay}`;
+      const time = date.getTime();
+      const newTimer = {
+          id: time,
+          title: name,
+          time: 0,
+          timestamp: time,
+          isStart: true
+        }
+      this.timers.unshift(newTimer);
+      this.newTimerName = '';
+      this.saveToStorage();
+    },
+    saveToStorage() {
+      localStorage.setItem('timers', JSON.stringify(this.timers));
+      this.timers = JSON.parse(localStorage.getItem('timers'));
     }
   }
 }

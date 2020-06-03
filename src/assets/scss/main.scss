@@ -29,6 +29,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $mainFontColor;
+  min-width: 420px;
 }
 
 *,
@@ -87,7 +88,8 @@ li {
 // }
 
 .container {
-  width: 1170px;
+  max-width: 1170px;
+  width: 100%;
   position: relative;
   margin: 0 auto;
   // max-width: $desktopWidth;
@@ -117,3 +119,11 @@ li {
 @import "blocks/timers-block.scss";
 @import "blocks/footer.scss";
 @import "blocks/social.scss";
+
+
+@media screen and (max-width: 1199px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

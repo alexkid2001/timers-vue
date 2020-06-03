@@ -11,6 +11,9 @@
     line-height: 30px;
     font-family: $extraBoldFont;
     width: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
   &__counter {

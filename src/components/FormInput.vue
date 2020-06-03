@@ -10,6 +10,7 @@
         :name="name"
         :value="value"
         :placeholder="hint"
+        @input="$emit('input', $event.target.value)"
       )
     slot
 </template>

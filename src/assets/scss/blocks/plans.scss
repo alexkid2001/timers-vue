@@ -10,7 +10,7 @@
   &__description {
     color: $secondaryFontColor;
     flex-basis: 370px;
-    max-width: 370;
+    max-width: 370px;
   }
 
   &__title {
@@ -44,5 +44,29 @@
     margin-left: auto;
     display: flex;
     align-items: center;
+  }
+
+  @media screen and (max-width: 1199px) {
+
+    &__wrap {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+    }
+
+    &__list {
+      margin-left: 0;
+    }
+  }
+
+  @media screen and (max-width: 797px) {
+
+    &__list {
+      flex-direction: column;
+
+      .plan-block {
+        margin-right: 0;
+      }
+    }
   }
 }

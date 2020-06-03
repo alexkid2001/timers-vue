@@ -11,6 +11,11 @@
   font-weight: bold;
   letter-spacing: 1px;
   cursor: pointer;
+  transition: opacity .2s;
+
+  &:hover {
+    opacity: .8;
+  }
 
   &_small {
     font-size: 14px;
