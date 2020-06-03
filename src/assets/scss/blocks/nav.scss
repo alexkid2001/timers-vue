@@ -1,0 +1,18 @@
+.nav {
+  display: flex;
+
+  &__item {
+    font-size: 15px;
+    line-height: 20px;
+    cursor: pointer;
+    text-replace: all .2s;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    &:nth-child(n+2) {
+      margin-left: 31px;
+    }
+  }
+}

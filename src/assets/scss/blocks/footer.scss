@@ -1,0 +1,64 @@
+.footer {
+  background-color: white;
+
+
+  &__wrap {
+    padding-top: 25px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__logo {
+    font-family: $extraBoldFont;
+    font-size: 20px;
+    line-height: 25px;
+    padding-top: 5px;
+  }
+
+  &__author {
+    font-size: 11px;
+    line-height: 15px;
+    color: $markerColor;
+    text-align: center;
+    padding: 13px 0 0 11px;
+
+    span {
+      color: $mainFontColor;
+      font-weight: bold;
+      margin-left: 5px;
+    }
+
+    svg {
+      // width: 15px;
+      // height: 15px;
+      margin-left: 1px;
+      margin-right: 4px;
+
+      path {
+        fill: #FF4876;
+      }
+    }
+  }
+
+  &__copyright {
+    margin-top: 10px;
+  }
+
+  @media screen and (max-width: 639px) {
+
+    &__wrap {
+      flex-direction: column;
+      align-items: center;
+
+      & > * {
+        padding: 0;
+
+        &:nth-child(n+2) {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+@import "mixins";
+
+@include font-face("Nunito Sans", "/assets/fonts/nunito-sans-v5-latin-regular", 400, "normal");
+@include font-face("Nunito Sans ExtraBold", "/assets/fonts/nunito-sans-v5-latin-800", 800, normal);

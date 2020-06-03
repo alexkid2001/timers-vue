@@ -1,0 +1,23 @@
+.list {
+
+  &__item {
+    padding-left: 30px;
+    position: relative;
+    font-size: 15px;
+  }
+
+  &__icon {
+    position: absolute;
+    top: -2px;
+    left: -4px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+
+      path {
+        fill: $markerColor;
+      }
+    }
+  }
+}
