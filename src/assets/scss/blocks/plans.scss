@@ -69,4 +69,43 @@
       }
     }
   }
+
+  @media screen and (max-width: 419px) {
+
+    &__description {
+      flex-basis: auto;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__number {
+
+      .input_select {
+        flex-direction: column;
+      } 
+    }
+
+    &__promo {
+      flex-direction: column;
+
+      .input {
+        width: 100%;
+      }
+
+      .button {
+        margin-top: 20px;
+        width: 100%;
+      }
+    }
+
+    &__list {
+      margin-top: 40px;
+
+      .plan-block {
+        width: auto;
+      }
+    }
+  }
 }

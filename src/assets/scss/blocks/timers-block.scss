@@ -117,4 +117,14 @@
       }
     }
   }
+
+  @media screen and (max-width: 419px) {
+
+    .timer {
+
+      &__action {
+        margin-left: 20px;
+      }
+    }
+  }
 }

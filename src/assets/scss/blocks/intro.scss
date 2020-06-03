@@ -81,5 +81,21 @@
       bottom: auto;
     }
   }
+
+  @media screen and (max-width: 419px) {
+
+    &__action {
+      flex-direction: column;
+
+      & > * {
+        width: 100%;
+
+        &:nth-child(n+2) {
+          margin-left: 0;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
   
 }

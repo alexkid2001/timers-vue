@@ -55,10 +55,27 @@
     &__nav {
       position: fixed;
       right: -400px;
+      top: 0;
+      bottom: 0;
       flex-direction: column;
+      padding: 100px 20px 0;
+      background-color: rgba($mainFontColor, .8);
 
       .nav {
         flex-direction: column;
+
+        &__item {
+          padding: 20px 20px 20px 0;
+
+          &:nth-child(n+2) {
+            margin-left: 0;
+          }
+        }
+      }
+
+      .button {
+        margin-top: 50px;
+        margin-left: 0;
       }
     }
   }
