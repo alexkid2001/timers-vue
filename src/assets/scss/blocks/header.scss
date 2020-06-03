@@ -41,7 +41,7 @@
   @media screen and (max-width: 797px) {
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: rgba($mainFontColor, .3);
+    background-color: rgba($mainFontColor, .5);
     position: fixed;
     top: 0;
     left: 0;
@@ -54,12 +54,19 @@
 
     &__nav {
       position: fixed;
-      right: -400px;
+      right: -250px;
       top: 0;
       bottom: 0;
       flex-direction: column;
-      padding: 100px 20px 0;
+      padding: 50px 20px 50px;
       background-color: rgba($mainFontColor, .8);
+      transition: all .3s;
+      width: 200px;
+      overflow-y: auto;
+
+      &.open {
+        right: 0;
+      }
 
       .nav {
         flex-direction: column;

@@ -67,8 +67,19 @@ li {
 
 
 @media screen and (max-width: 1199px) {
+
   .container {
     padding-left: 15px;
     padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 797px) {
+
+  body {
+    
+    &.overlay {
+      overflow: hidden;
+    }
   }
 }
