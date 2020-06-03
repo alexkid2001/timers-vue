@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import FormButton from './FormButton'
+import FormButton from './FormButton.vue'
 
 export default {
   components: {
